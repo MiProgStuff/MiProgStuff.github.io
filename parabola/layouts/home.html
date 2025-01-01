@@ -4,7 +4,61 @@ Homepage Layout: The home.html layout could pull in recent or featured posts, po
 
 Hero Section and Featured Posts: The hero image and featured posts can be integrated into the index.md file or directly in the home.html layout.
 
-<div class="hero" style="background-image: url('{{ site.baseurl }}/assets/images/hero-bg.jpg');">
-    <h1>Welcome to My Journal</h1>
-    <p>Discover the latest thoughts and articles.</p>
-</div>
+<!-- _layouts/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+</head>
+<body>
+  
+  <!-- Header Section -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/about' | relative_url }}">About</a></li>
+        <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('{{ '/assets/images/hero.jpg' | relative_url }}');">
+    <div class="hero-content">
+      <h1>Welcome to My Journal</h1>
+      <p>Explore the latest thoughts, articles, and stories.</p>
+      <a href="{{ '/posts' | relative_url }}" class="cta-button">Explore Posts</a>
+    </div>
+  </section>
+
+  <!-- Main Content: Recent Posts -->
+  <main>
+    <h2>Recent Posts</h2>
+    <div class="posts-list">
+      {% for post in site.posts limit:5 %}
+      <div class="post">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+        <a href="{{ post.url | relative_url }}" class="read-more">Read more...</a>
+      </div>
+      {% endfor %}
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+
+Explanation of the Code:
+Hero Section: A full-width banner at the top of the page with a background image and a call-to-action button to encourage visitors to explore your posts.
+Recent Posts: This section lists the most recent posts from your blog. We are using the {% for post in site.posts %} loop to dynamically pull in the posts.
+Navigation: Simple links for the homepage, about page, and contact page.
+Footer: Displays the copyright information.
