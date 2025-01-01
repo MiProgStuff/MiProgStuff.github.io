@@ -1,0 +1,1 @@
+about.md: Your "About" page, which explains what the journal is about, who’s behind it, and why you’re creating it.
