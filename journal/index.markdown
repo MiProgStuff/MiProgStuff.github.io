@@ -1,6 +1,11 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
+title: "Welcome to My Journal"
 ---
+
+# Welcome to My Journal
+Explore my thoughts, reflections, and ideas. Navigate through the topics using the menu above!
+
+- Discover **Travel** stories
+- Reflect on **Life** topics
+- Dive into **Tech** insights
