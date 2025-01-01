@@ -1,6 +1,6 @@
 title: "My Journal"
 baseurl: "/journal"  # Since the site is hosted under /journal
-url: "https://yourusername.github.io"  # Replace with your GitHub Pages URL
+url: "https://miprogstuff.github.io"  # Replace with your GitHub Pages URL
 
 # Optional settings
 theme: "minima"  # You can choose a theme for the journal
