@@ -1,4 +1,13 @@
+# _config.yml
+
 title: "PARABOLA"
 description: "Um espaço para escrever e explorar notícias."
 url: "https://www.parabola.pt"
-theme: minima   # You can also use a custom theme
+baseurl: "" # Set to '/yourrepo' if you're using GitHub Pages with a repo-based URL
+
+# Markdown processor
+markdown: kramdown
+
+# Default settings
+paginate: 5 # Number of posts per page
+theme: minima # Optional: Change or remove this if you're using custom styles
