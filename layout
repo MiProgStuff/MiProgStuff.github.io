@@ -1,0 +1,32 @@
+/my-journal-site
+│
+├── _config.yml                # Jekyll configuration file (site settings)
+├── _includes/                 # Reusable components (e.g., header, footer)
+│   ├── footer.html            # Footer component
+│   ├── header.html            # Header/navigation component
+│   └── head.html              # Metadata and common head elements
+│
+├── _layouts/                  # Layouts for different page types (e.g., homepage, post page)
+│   ├── default.html           # Base layout, can be applied to most pages
+│   ├── post.html              # Layout for individual blog posts
+│   └── home.html              # Layout for homepage or landing page
+│
+├── _posts/                    # All your blog posts (Markdown files)
+│   ├── 2023-01-01-first-post.md  # A sample post in Markdown format
+│   └── 2023-01-02-second-post.md
+│
+├── assets/                    # Static assets like CSS, JS, and images
+│   ├── css/
+│   │   └── styles.css         # Main CSS file (or Sass/SCSS files)
+│   ├── js/
+│   │   └── script.js          # Optional JS file for interactivity
+│   ├── images/
+│   │   ├── logo.png           # Images for the site
+│   │   └── hero-bg.jpg        # Background images for homepage/landing
+│   └── fonts/                 # Optional: custom fonts
+│       └── custom-font.woff
+│
+├── about.md                   # About page (Markdown file)
+├── index.md                   # Homepage content in Markdown (optional for static content)
+├── 404.html                   # Custom 404 page (error page)
+└── README.md                  # Project documentation (optional)
