@@ -1,0 +1,1 @@
+A markdown file used to provide information about your repository, project, and setup instructions. It’s especially useful if you’re sharing or open-sourcing your journal design.
