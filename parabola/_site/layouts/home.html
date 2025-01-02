@@ -7,7 +7,16 @@ in a grid or list format (like Quartzs homepage).
 
 Hero Section and Featured Posts: The hero image and 
 featured posts can be integrated into the index.md file or 
-directly in the home.html layout.-->
+directly in the home.html layout.
+
+Explanation of the Code:
+Hero Section: A full-width banner at the top of the page with a background image and a call-to-action button to encourage visitors to explore your posts.
+Recent Posts: This section lists the most recent posts from your blog. We are using the {% for post in site.posts %} loop to dynamically pull in the posts.
+Navigation: Simple links for the homepage, about page, and contact page.
+Footer: Displays the copyright information.-->
+
+
+
 
 <!-- _layouts/home.html -->
 <!DOCTYPE html>
@@ -16,6 +25,12 @@ directly in the home.html layout.-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ site.title }}</title>
+
+  <!-- Link to favicon -->
+  <link rel="icon" href="{{ '/assets/icons/favicon.ico' | relative_url }}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ '/assets/icons/favicon.ico' | relative_url }}" type="image/x-icon">
+
+  <!-- Link to CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
 <body>
@@ -32,7 +47,7 @@ directly in the home.html layout.-->
   </header>
 
   <!-- Hero Section -->
-  <section class="hero" style="background-image: url('{{ "/assets/images/hero-bg.jpg" | relative_url }}');">
+  <section class="hero" style="background-image: url('{{ '/assets/images/hero-bg.jpg' | relative_url }}');">
     <div class="hero-content">
       <h1>Welcome to My Journal</h1>
       <p>Explore the latest thoughts, articles, and stories.</p>
@@ -62,8 +77,3 @@ directly in the home.html layout.-->
 </body>
 </html>
 
-<!--Explanation of the Code:
-Hero Section: A full-width banner at the top of the page with a background image and a call-to-action button to encourage visitors to explore your posts.
-Recent Posts: This section lists the most recent posts from your blog. We are using the {% for post in site.posts %} loop to dynamically pull in the posts.
-Navigation: Simple links for the homepage, about page, and contact page.
-Footer: Displays the copyright information.-->
